@@ -24,26 +24,33 @@ public class Product {
     public String getCategory() {
         return category;
     }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     @Override
     public String toString() {
-        return "Товар[артикул=" + id +
-                ", название=" + name +
-                ", цена=" + price +
-                ", категория=" + category + "]";
+        return "Product{id=" + id +
+                ", name='" + name + '\'' +  // ← ДОБАВЛЕНЫ КАВЫЧКИ
+                ", price=" + price +
+                ", category='" + category + '\'' + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
         Product other = (Product) obj;
-
         return this.id == other.id &&
                 Objects.equals(this.category, other.category);
     }
