@@ -11,6 +11,7 @@ public class Order {
 
     @Override
     public String toString() {
+
         String s = "Заказ[покупатель=" + customer +
                 ", корзина=" + Arrays.toString(basket) + "]";
         return s;

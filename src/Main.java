@@ -3,6 +3,7 @@ public class Main {
         System.out.println("Hello Mentor");
         System.out.println();
         System.out.println("=== ТЕСТИРОВАНИЕ КЛАССА PRODUCT ===\n");
+        // Тестирование сравнения объектов класса Product
         Product product1 = new Product(1, "Ноутбук", 50000, "Электроника");
         Product product2 = new Product(2, "Мышь", 1500, "Электроника");
         Product product3 = new Product(1, "Смартфон", 30000, "Электроника");
